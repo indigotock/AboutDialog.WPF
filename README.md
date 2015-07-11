@@ -4,4 +4,4 @@ A class library for a reusable about dialog, capable of displaying details on th
 
 ## License
 
-Check the  [LICENSE][LICENSE.md] file for licensing information.
+Check the  [LICENSE](LICENSE.md) file for licensing information.
