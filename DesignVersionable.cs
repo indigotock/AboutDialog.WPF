@@ -1,7 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Reflection;
 using KyleHughes.AboutDialog.WPF.Properties;
 
 namespace KyleHughes.AboutDialog.WPF
@@ -23,13 +21,14 @@ namespace KyleHughes.AboutDialog.WPF
             get { return string.Format(Resources.MIT, Environment.NewLine, Copyright); }
             set { }
         }
+
         public string Copyright
         {
-            get { return $"Copyright \u00a9 {Author} {string.Join(", ",Years)}"; }
+            get { return $"Copyright \u00a9 {Author} {string.Join(", ", Years)}"; }
             set { }
         }
 
-        public int[] Years { get; set; } = { 2013, 2014, 2015 };
+        public int[] Years { get; set; } = {2013, 2014, 2015};
         public bool ShowYearsAsRange { get; set; } = true;
         public IList<Tuple<string, Uri>> Links { get; set; }
     }

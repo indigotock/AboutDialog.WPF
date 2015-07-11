@@ -23,7 +23,7 @@ namespace KyleHughes.AboutDialog.WPF
         ///     Gets or sets the copyright string for this product.
         /// </summary>
         string Copyright { get; set; }
-        
+
         /// <summary>
         ///     Gets or sets a user-friendly representation of the version of the product, e.g. 1.0.4.
         /// </summary>
@@ -48,7 +48,7 @@ namespace KyleHughes.AboutDialog.WPF
         ///     Gets or sets the license information of the product, ideally would include copyright notice.
         /// </summary>
         string License { get; set; }
-        
+
         /// <summary>
         ///     Gets or sets the years this license applies to.
         /// </summary>

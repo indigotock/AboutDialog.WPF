@@ -3,7 +3,7 @@
 namespace KyleHughes.AboutDialog.WPF
 {
     /// <summary>
-    /// Interaction logic for AnalysisDialogWindow.xaml
+    ///     Interaction logic for AnalysisDialogWindow.xaml
     /// </summary>
     internal partial class AboutDialogWindow : Window
     {

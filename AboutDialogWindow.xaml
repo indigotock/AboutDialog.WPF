@@ -10,7 +10,7 @@
         ResizeMode="NoResize"
         Title="{Binding Product, StringFormat=About \{0\}}" SizeToContent="WidthAndHeight">
     <Window.DataContext>
-        <wpf:DesignVersionable/>
+        <wpf:DesignVersionable />
     </Window.DataContext>
     <Grid>
         <StackPanel MaxWidth="300" MinWidth="200" Margin="25,10,25,20">
@@ -18,7 +18,7 @@
                 <Style x:Key="LicenseCollapseStyle" TargetType="StackPanel">
                     <Style.Triggers>
                         <DataTrigger Binding="{Binding License}" Value="{x:Null}">
-                            <Setter Property="Visibility" Value="Collapsed"/>
+                            <Setter Property="Visibility" Value="Collapsed" />
                         </DataTrigger>
                     </Style.Triggers>
                 </Style>
@@ -26,24 +26,29 @@
             <TextBlock FontSize="{DynamicResource {x:Static SystemParameters.CaptionHeightKey}}">
                 <TextBlock.Text>
                     <MultiBinding StringFormat="{}{0} v{1}">
-                        <Binding Path="Product"/>
-                        <Binding Path="Version"/>
+                        <Binding Path="Product" />
+                        <Binding Path="Version" />
                     </MultiBinding>
                 </TextBlock.Text>
             </TextBlock>
-            <TextBlock Text="{Binding Description}" TextWrapping="Wrap" FontSize="{DynamicResource {x:Static SystemFonts.StatusFontSizeKey}}"/>
+            <TextBlock Text="{Binding Description}" TextWrapping="Wrap"
+                       FontSize="{DynamicResource {x:Static SystemFonts.StatusFontSizeKey}}" />
 
             <StackPanel Style="{StaticResource LicenseCollapseStyle}">
-                <TextBlock Text="License:"  Margin="0,5,0,0"/>
-                <TextBox Text="{Binding License}" TextWrapping="Wrap" FontSize="{DynamicResource {x:Static SystemFonts.StatusFontSizeKey}}" MaxHeight="150" VerticalScrollBarVisibility="Visible" IsReadOnly="true"/>
+                <TextBlock Text="License:" Margin="0,5,0,0" />
+                <TextBox Text="{Binding License}" TextWrapping="Wrap"
+                         FontSize="{DynamicResource {x:Static SystemFonts.StatusFontSizeKey}}" MaxHeight="150"
+                         VerticalScrollBarVisibility="Visible" IsReadOnly="true" />
             </StackPanel>
             <ItemsControl ItemsSource="{Binding Links}" Margin="0,5,0,0">
                 <ItemsControl.ItemTemplate>
                     <DataTemplate>
                         <Grid>
-                            <TextBlock><wpf:ExternalHyperlink NavigateUri="{Binding Item2}">
-                                <TextBlock Text="{Binding Item1}"/>
-                            </wpf:ExternalHyperlink></TextBlock>
+                            <TextBlock>
+                                <wpf:ExternalHyperlink NavigateUri="{Binding Item2}">
+                                    <TextBlock Text="{Binding Item1}" />
+                                </wpf:ExternalHyperlink>
+                            </TextBlock>
                         </Grid>
                     </DataTemplate>
                 </ItemsControl.ItemTemplate>

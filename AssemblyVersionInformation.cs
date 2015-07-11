@@ -45,7 +45,7 @@ namespace KyleHughes.AboutDialog.WPF
         public string Description { get; set; }
 
         /// <summary>
-        ///     Gets or sets the author or creator of the product. Defaults to the <see cref="Owner"/>
+        ///     Gets or sets the author or creator of the product. Defaults to the <see cref="Owner" />
         /// </summary>
         public string Author { get; set; }
 
@@ -62,7 +62,7 @@ namespace KyleHughes.AboutDialog.WPF
             get { return GetLicenseText(); }
             set { }
         }
-        
+
         /// <summary>
         ///     Gets or sets the years this license applies to.
         /// </summary>
