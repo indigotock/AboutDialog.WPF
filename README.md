@@ -5,3 +5,11 @@ A class library for a reusable about dialog, capable of displaying details on th
 ## License
 
 Check the  [LICENSE](LICENSE.md) file for licensing information.
+
+## NuGet
+
+Find it on NuGet [here](https://www.nuget.org/packages/AboutDialog.WPF). Run this to install it:
+
+```
+Install-Package AboutDialog.WPF
+```
