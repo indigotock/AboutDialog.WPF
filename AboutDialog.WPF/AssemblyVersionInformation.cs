@@ -19,6 +19,10 @@ namespace KyleHughes.AboutDialog.WPF
 
         private readonly string _customLicense;
         private readonly LicenseType _type;
+
+        /// <summary>
+        ///     Gets or sets a 64x64 image to display.
+        /// </summary>
         public BitmapImage Image { get; set; }
 
         /// <summary>
