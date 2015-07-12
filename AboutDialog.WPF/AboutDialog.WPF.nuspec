@@ -10,7 +10,7 @@
     <projectUrl>https://github.com/indigotock/AboutDialog.WPF</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>$description$</description>
-    <releaseNotes>Added support for an optional image to display</releaseNotes>
+    <releaseNotes>Added copy property for additional, non-description text</releaseNotes>
     <copyright>$copyright$</copyright>
     <tags>WPF About Dialog</tags>
   </metadata>
