@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
+using System.Windows.Media.Imaging;
 using KyleHughes.AboutDialog.WPF.Properties;
 
 namespace KyleHughes.AboutDialog.WPF
@@ -18,6 +19,7 @@ namespace KyleHughes.AboutDialog.WPF
 
         private readonly string _customLicense;
         private readonly LicenseType _type;
+        public BitmapImage Image { get; set; }
 
         /// <summary>
         ///     Gets or sets the product to which this assembly belongs.

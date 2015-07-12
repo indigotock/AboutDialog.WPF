@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Windows.Media.Imaging;
 using KyleHughes.AboutDialog.WPF.Properties;
 
 namespace KyleHughes.AboutDialog.WPF
@@ -9,6 +10,7 @@ namespace KyleHughes.AboutDialog.WPF
     /// </summary>
     internal sealed class DesignVersionable : IVersionable
     {
+        public BitmapImage Image { get; set; } = null;
         public string Product { get; set; } = "A product";
         public string Title { get; set; } = "An Assembly";
         public string Version { get; set; } = "1.0.3";

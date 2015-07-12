@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Windows.Media.Imaging;
 
 namespace KyleHughes.AboutDialog.WPF
 {
@@ -9,6 +10,11 @@ namespace KyleHughes.AboutDialog.WPF
     /// </summary>
     public interface IVersionable
     {
+        /// <summary>
+        ///     Gets or sets a 64x64 image to display.
+        /// </summary>
+        BitmapImage Image { get; set; }
+
         /// <summary>
         ///     Gets or sets the name of this product.
         /// </summary>
