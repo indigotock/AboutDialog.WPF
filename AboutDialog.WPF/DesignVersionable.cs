@@ -30,8 +30,17 @@ namespace KyleHughes.AboutDialog.WPF
             set { }
         }
 
-        public int[] Years { get; set; } = {2013, 2014, 2015};
+        public int[] Years { get; set; } = { 2013, 2014, 2015 };
         public bool ShowYearsAsRange { get; set; } = true;
-        public IList<Tuple<string, Uri>> Links { get; set; }
+
+        public IList<Tuple<string, Uri>> Links
+        {
+            get { return new List<Tuple<string, Uri>>
+            {
+                new Tuple<string, Uri>("Link 1", new Uri("http://example.com/")),
+                new Tuple<string, Uri>("Link 2", new Uri("http://example.com/"))
+            }; }
+            set { }
+        }
     }
 }
