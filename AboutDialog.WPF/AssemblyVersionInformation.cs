@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Reflection;
+using System.Windows.Documents;
 using System.Windows.Media.Imaging;
 using KyleHughes.AboutDialog.WPF.Properties;
 
@@ -24,6 +26,11 @@ namespace KyleHughes.AboutDialog.WPF
         ///     Gets or sets a 64x64 image to display.
         /// </summary>
         public BitmapImage Image { get; set; }
+
+        /// <summary>
+        ///     Gets or sets additional text which can be formatted
+        /// </summary>
+        public string Copy { get; set; }
 
         /// <summary>
         ///     Gets or sets the product to which this assembly belongs.

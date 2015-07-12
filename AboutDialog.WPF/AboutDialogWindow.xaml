@@ -10,26 +10,10 @@
         ResizeMode="NoResize"
         Title="{Binding Product, StringFormat=About \{0\}}" SizeToContent="WidthAndHeight">
     <Window.DataContext>
-        <wpf:DesignVersionable />
+        <wpf:DesignVersionable/>
     </Window.DataContext>
     <Grid>
         <StackPanel MaxWidth="300" MinWidth="200" Margin="25,10,25,20">
-            <StackPanel.Resources>
-                <Style x:Key="LicenseCollapseStyle" TargetType="StackPanel">
-                    <Style.Triggers>
-                        <DataTrigger Binding="{Binding License}" Value="{x:Null}">
-                            <Setter Property="Visibility" Value="Collapsed" />
-                        </DataTrigger>
-                    </Style.Triggers>
-                </Style>
-                <Style x:Key="ImageCollapseStyle" TargetType="Image">
-                    <Style.Triggers>
-                        <DataTrigger Binding="{Binding Image}" Value="{x:Null}">
-                            <Setter Property="Visibility" Value="Collapsed" />
-                        </DataTrigger>
-                    </Style.Triggers>
-                </Style>
-            </StackPanel.Resources>
             <Grid>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto" />
@@ -47,13 +31,43 @@
                         </MultiBinding>
                     </TextBlock.Text>
                 </TextBlock>
-                <TextBlock Text="{Binding Description}" TextWrapping="Wrap" Grid.Row="1"
+                <TextBlock Text="{Binding Description}" TextWrapping="Wrap" Grid.Row="1" Grid.Column="0"
                            FontSize="{DynamicResource {x:Static SystemFonts.StatusFontSizeKey}}" />
-                <Image Grid.RowSpan="2" Grid.Column="2" Source="{Binding Image}" Height="64" Width="64"
-                       Style="{StaticResource ImageCollapseStyle}" />
+                <Image Grid.Row="0" Grid.RowSpan="2" Grid.Column="1" Source="{Binding Image}" Height="64" Width="64">
+                    <Image.Resources>
+                        <Style TargetType="Image">
+                            <Style.Triggers>
+                                <DataTrigger Binding="{Binding Image}" Value="{x:Null}">
+                                    <Setter Property="Visibility" Value="Collapsed" />
+                                </DataTrigger>
+                            </Style.Triggers>
+                        </Style>
+                    </Image.Resources>
+                </Image>
             </Grid>
+            <TextBlock TextWrapping="Wrap" MinHeight="0" Text="{Binding Copy}"
+                           FontSize="{DynamicResource {x:Static SystemFonts.StatusFontSizeKey}}" Margin="0,5,0,0">
+                <TextBlock.Style>
+                    <Style TargetType="TextBlock">
+                        <Style.Triggers>
+                            <DataTrigger Binding="{Binding Copy}" Value="{x:Null}">
+                                <Setter Property="Visibility" Value="Collapsed" />
+                            </DataTrigger>
+                        </Style.Triggers>
+                    </Style>
+                </TextBlock.Style>
+            </TextBlock>
 
-            <StackPanel Style="{StaticResource LicenseCollapseStyle}">
+            <StackPanel>
+                <StackPanel.Resources>
+                    <Style TargetType="StackPanel">
+                        <Style.Triggers>
+                            <DataTrigger Binding="{Binding License}" Value="{x:Null}">
+                                <Setter Property="Visibility" Value="Collapsed" />
+                            </DataTrigger>
+                        </Style.Triggers>
+                    </Style>
+                </StackPanel.Resources>
                 <TextBlock Text="License:" Margin="0,5,0,0" />
                 <TextBox Text="{Binding License}" TextWrapping="Wrap"
                          FontSize="{DynamicResource {x:Static SystemFonts.StatusFontSizeKey}}" MaxHeight="150"
